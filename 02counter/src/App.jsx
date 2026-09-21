@@ -13,8 +13,17 @@ let [counter, setCounter] = useState(15)
    if(counter>=20){
     return
    }
+    // setCounter(counter+1) // first method
+
+    /*setCounter(counter+1)
+    setCounter(counter+1) // if we run this type then it updates only one time because bunch ja rha hai ek sath
     setCounter(counter+1)
-    
+    setCounter(counter+1)*/ // second method
+
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1) // Third method
  }
 
  const removeValue = () => {
